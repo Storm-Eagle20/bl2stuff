@@ -1,0 +1,230 @@
+set WeaponNamePartDefinition'GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub' PartName Rim Fire
+
+set AttributePresentationDefinition'GD_Weap_Pistol.Name.Title_Bandit.Title_Legendary_Gub:AttributePresentationDefinition_8' NoConstraintText Many like you have tried to best me. All have failed.
+
+set WeaponBalanceDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub' Manufacturers
+(
+    (
+        Manufacturer = ManufacturerDefinition'GD_Manufacturers.Manufacturers.Vladof',
+        Grades =
+        (
+            (
+                GradeModifiers =
+                (
+                    ExpLevel = 0,
+                    CustomInventoryDefinition = None
+                ),
+                GameStageRequirement =
+                (
+                    MinGameStage = 1,
+                    MaxGameStage = 10000
+                ),
+                MinSpawnProbabilityModifier =
+                (
+                    BaseValueConstant = 1.000000,
+                    BaseValueAttribute = None,
+                    InitializationDefinition = None,
+                    BaseValueScaleConstant = 1.000000
+                ),
+                MaxSpawnProbabilityModifier =
+                (
+                    BaseValueConstant = 1.000000,
+                    BaseValueAttribute = None,
+                    InitializationDefinition = None,
+                    BaseValueScaleConstant = 1.000000
+                )
+            )
+        )
+    )
+)
+
+
+set WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub' WeaponAttributeEffects
+(
+    (
+        AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponDamage',
+        ModifierType = MT_Scale,
+        BaseModifierValue =
+        (
+            BaseValueConstant = 1.050000,
+            BaseValueAttribute = None,
+            InitializationDefinition = None,
+            BaseValueScaleConstant = 1.000000
+        )
+    ),
+    (
+        AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponClipSize',
+        ModifierType = MT_PreAdd,
+        BaseModifierValue =
+        (
+            BaseValueConstant = 28.000000,
+            BaseValueAttribute = None,
+            InitializationDefinition = None,
+            BaseValueScaleConstant = 1.000000
+        )
+    ),
+    (
+        AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponProjectileSpeedMultiplier',
+        ModifierType = MT_Scale,
+        BaseModifierValue =
+        (
+            BaseValueConstant = -0.500000,
+            BaseValueAttribute = None,
+            InitializationDefinition = None,
+            BaseValueScaleConstant = 1.000000
+        )
+    ),
+    (
+        AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponProjectilesPerShot',
+        ModifierType = MT_PreAdd,
+        BaseModifierValue =
+        (
+            BaseValueConstant = 4.000000,
+            BaseValueAttribute = None,
+            InitilizationDefinition = None,
+            BaseValueConstant = 1.000000
+        )
+    ),
+    (
+        AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponFireInterval',
+        ModifierType = MT_Scale,
+        BaseModifierValue =
+        (
+            	BaseValueConstant = -2.500000	BaseValueAttribute = None,
+            	InitializationDefinition = None,
+            	BaseValueScaleConstant = 1.000000
+        )
+    )
+)
+
+,
+(
+    AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponSpread',
+    ModifierType = MT_Scale,
+    BaseModifierValue =
+    (
+        BaseValueConstant = -0.500000,
+        BaseValueAttribute = None,
+        InitializationDefinition = None,
+        BaseValueScaleConstant = 1.000000
+    )
+)
+
+,
+(
+    AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponPerShotAccuracyImpulse',
+    ModifierType = MT_Scale,
+    BaseModifierValue =
+    (
+        BaseValueConstant = -10000.000000,
+        BaseValueAttribute = None,
+        InitializationDefinition = None,
+        BaseValueScaleConstant = 1.000000
+    )
+)
+
+,
+(
+    AttributeToModify = AttributeDefinition'D_Attributes.Weapon.WeaponShotCost',
+    ModifierType = MT_Scale,
+    BaseModifierValue =
+    (
+        BaseValueConstant = -1.000000,
+        BaseValueAttribute = None,
+        InitializationDefinition = None,
+        BaseValueScaleConstant = 1.000000
+    )
+)
+
+
+set WeaponPartDefinition'GD_Weap_Pistol.Barrel.Pistol_Barrel_Bandit_Gub' GestaltModeSkeletalMeshName = Pistol_Barrel_Vladof
+
+set WeaponPartListCollectionDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub:WeaponPartListCollectionDefinition_100' ElementalPartData =
+(
+    bEnabled = True,
+    WeightedParts =
+    (
+        (
+            Part = WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_None',
+            Manufacturers =
+            (
+                (
+                    Manufacturer = None,
+                    DefaultWeightIndex = 1
+                )
+            ),
+            MinGameStageIndex = 0,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 5
+        ),
+        (
+            Part = WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Fire',
+            Manufacturers =
+            (
+                (
+                    Manufacturer = None,
+                    DefaultWeightIndex = 1
+                )
+            ),
+            MinGameStageIndex = 6,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 4
+        ),
+        (
+            Part = WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Shock',
+            Manufacturers =
+            (
+                (
+                    Manufacturer = None,
+                    DefaultWeightIndex = 1
+                )
+            ),
+            MinGameStageIndex = 7,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 4
+        ),
+        (
+            Part = WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Corrosive',
+            Manufacturers =
+            (
+                (
+                    Manufacturer = None,
+                    DefaultWeightIndex = 1
+                )
+            ),
+            MinGameStageIndex = 8,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 4
+        ),
+        (
+            Part = WeaponPartDefinition'GD_Weap_Pistol.elemental.Pistol_Elemental_Slag',
+            Manufacturers =
+            (
+                (
+                    Manufacturer = None,
+                    DefaultWeightIndex = 1
+                )
+            ),
+            MinGameStageIndex = 9,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 4
+        )
+    )
+)
+
+
+set WeaponPartListCollectionDefinition'GD_Weap_Pistol.A_Weapons_Legendary.Pistol_Bandit_5_Gub:WeaponPartListCollectionDefinition_100' BodyPartData =
+(
+    bEnabled = True,
+    WeightedParts =
+    (
+        (
+            Part = WeaponPartDefinition'GD_Weap_Pistol.Body.Pistol_Body_Vladof_4',
+            Manufacturers = ,
+            MinGameStageIndex = 0,
+            MaxGameStageIndex = 1,
+            DefaultWeightIndex = 2
+        )
+    )
+
+set WeaponPartDefinition'GD_Weap_Pistol.ManufacturerMaterials.Mat_Bandit_5_Legendary' Material = MaterialInstanceConstant'Common_GunMaterials.Materials.Pistol.Mati_DahlEpic'
